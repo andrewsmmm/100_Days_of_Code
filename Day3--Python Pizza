@@ -1,0 +1,61 @@
+print("Welcome to Python Pizza Deliveries!")
+# size = input('What size pizza do you want? S, M or L: ')
+# pepperoni = input('Do you want pepperoni on your pizza? Y or N: ')
+# extra_cheese = input('Do you want extra cheese? Y or N: ')
+
+
+# set bill to zero ready for additions to choice
+bill = 0
+
+# Prices for pizzas and toppings (enables easy changing of prices):
+sm_pizza = 15
+m_pizza = 20
+lg_pizza = 25
+sm_pepperoni = 2
+m_pepperoni = 3
+lg_pepperoni = 3
+extra_cheese_price = 1
+
+# start of ordering process (added lower() variable in case user types lowercase 'l'
+size = input('What size pizza would you like? S=small, M=medium, L=large: ').lower()
+
+# code for ordering a small pizza
+if size == 's':
+    size = 'small'
+    print(f'You have chosen a {size} pizza, which costs ${sm_pizza}')
+    bill = int(sm_pizza)
+    pepperoni = input('Would you like to add pepperoni? Y or N: ').lower()
+    if pepperoni == 'y':
+        bill += sm_pepperoni
+
+    extra_cheese = input("Do you want extra cheese? Y or N: ").lower()
+    if extra_cheese == 'y':
+        bill += extra_cheese_price
+
+# code for ordering a medium pizza
+elif size == 'm':
+    size = 'medium'
+    print(f'You have chosen a {size} pizza, which costs ${m_pizza}')
+    bill = int(m_pizza)
+    pepperoni = input('Would you like to add pepperoni? Y or N: ').lower()
+    if pepperoni == 'y':
+        bill += m_pepperoni
+
+    extra_cheese = input("Do you want extra cheese? Y or N: ").lower()
+    if extra_cheese == 'y':
+        bill += extra_cheese_price
+
+# code for ordering a large pizza
+elif size == 'l':
+    size = 'large'
+    print(f'You have chosen a {size} pizza, which costs ${lg_pizza}')
+    bill = lg_pizza
+    pepperoni = input('Would you like to add pepperoni? Y or N: ').lower()
+    if pepperoni == 'y':
+        bill += lg_pepperoni
+
+    extra_cheese = input("Do you want extra cheese? Y or N: ").lower()
+    if extra_cheese == 'y':
+        bill += extra_cheese_price
+
+print(f'Your final bill is: ${bill}.')
