@@ -1,0 +1,13 @@
+sizes = {'s': ('small', 15, 2), 'm': ('medium', 20, 3), 'l': ('large', 25, 3)}
+size_input = input('What size pizza would you like? S=small, M=medium, L=large: ').lower()
+if size_input in sizes:
+    size, base_price, pep_price = sizes[size_input]
+    bill = base_price
+    print(f'You have chosen a {size} pizza, which costs ${base_price}')
+    if input('Would you like to add pepperoni? Y or N: ').lower() == 'y':
+        bill += pep_price
+    if input("Do you want extra cheese? Y or N: ").lower() == 'y': # this is pretty cool
+        bill += 1
+    print(f'Your final bill is: ${bill}.')
+else:
+    print('Invalid pizza size selected.')
