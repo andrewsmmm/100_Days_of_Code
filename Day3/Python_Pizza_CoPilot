@@ -1,3 +1,4 @@
+# this is Co-Pilot's suggestion to rationlize my code in Day3--Python Pizza
 sizes = {'s': ('small', 15, 2), 'm': ('medium', 20, 3), 'l': ('large', 25, 3)}
 size_input = input('What size pizza would you like? S=small, M=medium, L=large: ').lower()
 if size_input in sizes:
