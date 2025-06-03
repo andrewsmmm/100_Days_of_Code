@@ -1,0 +1,15 @@
+# print("Welcome to the rollercoaster!")
+# height = int(input("What is your height in cm? "))
+# if height >= 150:
+# print('You are tall enough to ride')
+# else:  # prints the condition if the 'if' statement is false
+# print('Sorry, you are not tall enough to ride')
+
+name = input('Enter name:')
+length_of_name = len(name)
+
+class_name = (type(name))
+print('The class type for name is' + ' ' + str(class_name))
+print(type(length_of_name))
+
+print('Number of letters in your name=' + str(length_of_name))
