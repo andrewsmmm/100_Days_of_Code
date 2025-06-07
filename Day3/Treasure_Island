@@ -48,10 +48,6 @@ def left_path():
         game_over()
 
 
-def river_swim():
-    print('hello')
-
-
 def old_cottage():
     print("You have reached an old cottage with three colored doors.")
     choice = input(f"{name}, do you choose the 'red' door, the 'white' door or the 'blue' door?: \n").lower().rstrip()
