@@ -1,0 +1,96 @@
+from encodings import normalize_encoding
+
+print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\ ` . "-._ /_______________|_______
+|                   | |o ;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+
+name = input('What is your name?: ')
+print(f'Welcome {name} to the Treasure Island.')
+print("Your mission is to find the treasure.")
+
+choice = input('There are two paths. Do you take the \'left\' or \'right\' path:\n')
+
+
+def game_over():
+    print('You failed in your quest. GAME OVER 😢')
+
+
+def treasure_found():
+    print('You win 🎉. You found the treasure')
+
+
+def left_path():
+    print('You have come to a fast flowing river;')
+    choice = input('Do you \'swim\' across or wait for the \'ferryman\'?:\n').lower().rstrip()
+    if choice == 'swim':
+        river_swim()
+    elif choice == 'ferryman':
+        print('Sadly the ferryman is DEATH')
+        game_over()
+
+
+def river_swim():
+    print('hello')
+
+
+def old_cottage():
+    print("You have reached an old cottage with three colored doors.")
+    choice = input(f"{name}, do you choose the 'red' door, the 'white' door or the 'blue' door?: \n").lower().rstrip()
+    if choice == "white":
+        treasure_found()
+    elif choice == "red":
+        print('Behind the red door is a dragon. You are engulfed in flame.')
+        game_over()
+    elif choice == 'blue':
+        print('Behind the blue door is an army of orcs')
+        game_over()
+
+
+def right_path():
+    print(f'{name}, you have come to a deep ravine,')
+    choice = input('You can either \'climb down\' or use the rickety \'rope bridge\' \n').lower().rstrip()
+    if choice == 'climb down':
+        print('The rocks gave way and you fell to your death')
+        game_over()
+    elif choice == 'rope bridge':
+        print('You made it across the other side but only just')
+        old_cottage()
+
+
+def river_swim():
+    print(f'{name}, you get washed down river but end up further downstream.')
+    choice = input('Do you \'swim back\' upstream or \'walk\' on?:\n').lower().rstrip()
+    if choice == 'swim back':
+        print('You tire swimming against the current and drown')
+        game_over()
+    elif choice == 'walk':
+        old_cottage()
+
+
+if choice == 'left':
+    left_path()
+elif choice == 'right':
+    right_path()
+else:
+    print('Please enter either \'left\' or \'right\'')
+
+print('Thanks for playing...until next time')
