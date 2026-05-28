@@ -1,3 +1,4 @@
+'''this is my solution to the Treasure Island Project'''
 print(r'''
 *******************************************************************************
           |                   |                  |                     |
