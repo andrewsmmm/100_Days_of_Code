@@ -9,7 +9,11 @@ print(f"The person paying the bill tonight is: {payee}")
 friends = ["Alice", "Bob", "Charlie", "David", "Emanuel"]
 print(random.choice(friends))
 
-# Note: I added a process time element to compare the time taken by both solutions. The process time is the same for both solutions, which suggests that they are equally efficient in terms of execution time. However, the second solution is more concise and easier to read, which may make it more preferable in terms of code readability and maintainability.
+# Note: I added a process time element to compare the time taken by both solutions.
+# The process time is the same for both solutions, which suggests that they are
+# equally efficient in terms of execution time.
+# Key Difference:
+# The main trade-off is readability and reusability versus conciseness. The first approach is more explicit and allows for reusing the payee value, while the second is leaner when you only need to perform a single action with the random selection. Both execute in virtually the same time, as the code comments note.
 process_time = time.process_time()
 print(f"Process time: {process_time}")
 
