@@ -1,6 +1,6 @@
 import random
-#ASCII art for rock, paper, scissors game
 
+#ASCII art for rock, paper, scissors game
 rock = '''
     _______
 ---'   ____)
@@ -29,7 +29,7 @@ scissors = '''
 '''
 
 #soliciting user choice
-your_choice = input("Enter your choice (rock, paper, or scissors): ").lower()
+user_choice = input("Enter your choice (rock, paper, or scissors): ").lower()
 print()
 
 #logic for computer choice
@@ -45,23 +45,22 @@ elif computer_choice == "scissors":
     print(f"Computer's choice:\n {scissors}")
 
 # code for showing the ASCII art of rock, paper or scissors
-if your_choice == "rock":
+if user_choice == "rock":
     print(f"Your choice:\n {rock}")
-elif your_choice == "paper":
+elif user_choice == "paper":
     print(f"Your choice:\n {paper}")
-elif your_choice == "scissors":
+elif user_choice == "scissors":
     print(f"Your choice:\n {scissors}")
 
 #logic for who wins the game using if, elif and and/or statements
-if your_choice == computer_choice:
-    print(f"Both of you chose {your_choice}. It's a tie!")
-elif (your_choice == 'rock' and computer_choice == 'scissors') or \
-     (your_choice == 'paper' and computer_choice == 'rock') or \
-     (your_choice == 'scissors' and computer_choice == 'paper'):
-    print(f"You chose {your_choice} and the computer chose {computer_choice}. You win!")
+if user_choice == computer_choice:
+    print(f"Both of you chose {user_choice}. It's a tie!")
+elif (user_choice == 'rock' and computer_choice == 'scissors') or \
+     (user_choice == 'paper' and computer_choice == 'rock') or \
+     (user_choice == 'scissors' and computer_choice == 'paper'):
+    print(f"You chose {user_choice} and the computer chose {computer_choice}. You win!")
 else:
-    print(f"You chose {your_choice} and the computer chose {computer_choice}. You lose!")
-
+    print(f"You chose {user_choice} and the computer chose {computer_choice}. You lose!")
 
 #Co-Pilot's solution to the same problem
 # import random
@@ -86,4 +85,4 @@ else:
 #         if wins_against[your_choice] == computer_choice:
 #             print(f"You chose {your_choice}, computer chose {computer_choice}. You win!")
 #         else:
-#             print(f"You chose {your_choice}, computer chose {computer_choice}. You lose!")
+#             print(f"You chose {your_choice}, computer chose {computer_choice}. You lose!"
