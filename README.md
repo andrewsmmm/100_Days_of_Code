@@ -12,7 +12,7 @@ and find companies that might be good prospect targets. Plus, I am interested in
 My GitHub handle (Code-Odyssey) reflects the epic journey I am on. I don't know where it will land me but the journey through Python will take me places for sure.
 
 
-100 Days of Python Challenge
+##100 Days of Python Challenge##
 Welcome to the 100 Days of Python Challenge! 🚀
 
 This repository is dedicated to documenting my journey through the 100 days of Python challenge, where I commit to coding and learning Python every day for 100 days.
