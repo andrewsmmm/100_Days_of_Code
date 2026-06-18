@@ -1,4 +1,10 @@
 '''100 Days of Code: Password Generator Project '''
+# I was just told by someone on Reddit that my code here is junk.
+# if someone enters a minus number, the code will get into an
+# infinite loop because while != will never equal letters etc
+# Ugh - that's disappointing. But a learning opportunity.
+# Now know how not to do it. Plus I did have another go at this
+# The updated file is password_generator_v2.py
 
 import random
 
