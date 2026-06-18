@@ -31,4 +31,3 @@ for character in range(0, nr_symbols):
 
 random.shuffle(password_list)
 print(("Here is your password: ") + "".join(password_list))
-
